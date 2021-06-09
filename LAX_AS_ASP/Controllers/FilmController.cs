@@ -9,9 +9,9 @@ using LAX_AS_ASP.Models;
 
 namespace LAX_AS_ASP.Controllers
 {
-    public class HomeController : Controller
+    public class FilmController : Controller
     {
-        
+        // GET: Film
         public ActionResult Index()
         {
             List<FilmDB> Film = new List<FilmDB>();
@@ -28,21 +28,6 @@ namespace LAX_AS_ASP.Controllers
                     Film.Add(new FilmDB() { FilmID = Convert.ToInt32(dr[0]), FilmTitel = dr[1].ToString(), FilmInstruk = dr[2].ToString(), FilmUdgiv = Convert.ToInt32(dr[3]), FilmOm = dr[4].ToString(), FilmNomi = dr[5].ToString(), NomiVundet = Convert.ToInt32(dr[6]) });
 
             }
-
-            return View();
-        }
-
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
             return View();
         }
     }
