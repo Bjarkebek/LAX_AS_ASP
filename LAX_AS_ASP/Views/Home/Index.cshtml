@@ -1,0 +1,55 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Velkommen til LAX A/S</h1>
+    <p class="lead">Her kan du se de nyeste filmnomineringer</p>
+</div>
+
+<table class="database">
+    <tr>
+        <th>
+            @*FilmTitel*@
+        </th>
+        <th>
+            @*FilmInstruk*@
+        </th>
+        <th>
+            @*FilmUdgiv*@
+        </th>
+        <th>
+            @*FilmOm*@
+        </th>
+        <th>
+            @*FilmNomi*@
+        </th>
+        <th>
+            @*NomiVundet*@
+        </th>
+    </tr>
+    @foreach (var item in Model){
+    <tr>
+        <th>
+            @*FilmTitel*@
+        </th>
+        <th>
+            @*FilmInstruk*@
+        </th>
+        <th>
+            @*FilmUdgiv*@
+        </th>
+        <th>
+            @*FilmOm*@
+        </th>
+        <th>
+            @*FilmNomi*@
+        </th>
+        <th>
+            @*NomiVundet*@
+        </th>
+    </tr>
+    }
+
+
+</table>
