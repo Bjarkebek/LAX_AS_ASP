@@ -1,0 +1,63 @@
+﻿@*@model IEnumerable<LAX_AS_ASP.Models.FilmDB>
+
+@{
+    ViewBag.Title = "ListFilm";
+}
+
+<h2>Film Nomineringer</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FilmTitel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FilmInstruk)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FilmUdgiv)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FilmOm)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FilmNomi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NomiVundet)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FilmTitel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FilmInstruk)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FilmUdgiv)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FilmOm)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FilmNomi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NomiVundet)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>*@

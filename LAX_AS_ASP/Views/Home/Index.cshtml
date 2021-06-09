@@ -1,4 +1,6 @@
-﻿@{
+﻿@model IEnumerable<LAX_AS_ASP.Models.FilmDB>
+
+@{
     ViewBag.Title = "Home Page";
 }
 
@@ -7,49 +9,56 @@
     <p class="lead">Her kan du se de nyeste filmnomineringer</p>
 </div>
 
-<table class="database">
+<table class="table">
     <tr>
         <th>
-            @*FilmTitel*@
+            Titel
         </th>
         <th>
-            @*FilmInstruk*@
+            Instruktør
         </th>
         <th>
-            @*FilmUdgiv*@
+            Udgivelsesår
         </th>
         <th>
-            @*FilmOm*@
+            Om Filmen
         </th>
         <th>
-            @*FilmNomi*@
+            Nominering
         </th>
         <th>
-            @*NomiVundet*@
+            Resultat
         </th>
+        <th></th>
     </tr>
-    @foreach (var item in Model){
-    <tr>
-        <th>
-            @*FilmTitel*@
-        </th>
-        <th>
-            @*FilmInstruk*@
-        </th>
-        <th>
-            @*FilmUdgiv*@
-        </th>
-        <th>
-            @*FilmOm*@
-        </th>
-        <th>
-            @*FilmNomi*@
-        </th>
-        <th>
-            @*NomiVundet*@
-        </th>
-    </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FilmTitel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FilmInstruk)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FilmUdgiv)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FilmOm)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FilmNomi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomiVundet)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
     }
 
-
 </table>
+
