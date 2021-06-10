@@ -14,5 +14,8 @@ namespace LAX_AS_ASP.Models
         public string FilmOm { get; set; }
         public string FilmNomi { get; set; }
         public int NomiVundet { get; set; }
+        public string NomiResult1 = "Vundet";
+        public string NomiResult2 = "Tabt";
+
     }
 }
